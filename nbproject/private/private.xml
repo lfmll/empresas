@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/EtiquetaController.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/form.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/routes/web.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/create.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/form.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/edit.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/layouts/app.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/index.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/create.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/database/migrations/2018_04_04_184352_create_etiqueta_table.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/composer.json</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/edit.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/index.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/RubroController.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/.env</file>
+            <file>file:/opt/lampp/htdocs/empresa/config/app.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/database/migrations/2018_03_31_130206_create_rubro_table.php</file>
+        </group>
+    </open-files>
+</project-private>

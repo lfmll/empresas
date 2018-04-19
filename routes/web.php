@@ -12,12 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('buscar');
 });
 
 Auth::routes();
-
+Route::get('empresa/imagen/{filename}',function($filename){
+    $path=public_path("images/$filename");
+    if(!\File::exists($path)) abort(404);
+    $file=\File::get($path);
+    $type=\File::mimeType($path);
+    $response=Response::make($file,200);
+    $response->header("Content-Type",$type);
+    return $response;
+});
 Route::get('/home', 'HomeController@index');
 Route::resource('rubro','RubroController');
 Route::resource('etiqueta','EtiquetaController');
+Route::get('etiqueta/{id}/destroy',[
+    'uses'=>'EtiquetaController@destroy',
+    'as'=>'etiqueta.destroy'
+    ]);
+Route::resource('empresa','EmpresaController');
 

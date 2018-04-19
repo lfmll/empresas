@@ -1,6 +1,6 @@
 {!! Form::open(['url' => $url, 'method' => $method]) !!}
 <div class="form-group">
-    {{Form::text('nombre',$rubros->nombre,['class'=>'form-control','placeholder'=>'nombre'])}}
+    {{Form::text('nombre',$rubros->nombre,['class'=>'form-control','placeholder'=>'nombre','required'])}}
 </div>
 
 <div class="form-group">

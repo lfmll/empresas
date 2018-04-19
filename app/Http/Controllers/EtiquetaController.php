@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Etiqueta;
 
+
 class EtiquetaController extends Controller
 {
     /**
@@ -12,9 +13,10 @@ class EtiquetaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $etiquetas=Etiqueta::all();
+        $etiquetas=Etiqueta::search($request->nombre)->orderBy('id','ASC')->paginate(5);
+        
         return view("etiqueta.index",["etiquetas"=>$etiquetas]);
     }
 
@@ -40,6 +42,7 @@ class EtiquetaController extends Controller
         $etiquetas=new Etiqueta;
         $etiquetas->nombre=$request->nombre;
         if ($etiquetas->save()){
+            flash()->success("se ha registrado una nueva etiqueta");
             return redirect("/etiqueta");
         } else {
             return view("etiqueta.create",["etiquetas"=>$etiquetas]);
@@ -95,6 +98,9 @@ class EtiquetaController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
+        $etiquetas= Etiqueta::find($id);
+        $etiquetas->delete();
+        Flash::error('La etiqueta '.$etiquetas->nombre-"ha sido eliminado");
+        return redirect("/etiqueta");
+    } 
 }

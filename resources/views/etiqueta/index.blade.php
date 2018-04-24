@@ -6,12 +6,23 @@
     </div>
     
     <div class="container">
-    {!! Form::open(['route'=>'etiqueta.index','method'=>'GET','class'=>'navbar-form pull-right']) !!}
-    <div class="input-group">
-       {!! Form::text('name',null,['class'=>'form-control','placeholder'=>'Buscar Etiqueta..','aria-describedby'=>'buscar']) !!}
-       <span class="input-group-addon" id="buscar"><span class="glyphicon glyphicon-search" aria-hidden="false"></span></span>
-    </div>
-    {!! Form::close() !!}
+        
+        <a href="{{url('/etiqueta/create')}}" class="btn btn-info">
+            Registrar Nueva Etiqueta
+        </a>
+        {{ Form::open(['route' => 'etiqueta.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
+		
+        <div class="form-group">
+            {{Form::text('nombre',null,['class'=>'form-control','placeholder'=>'buscar x nombre---'])}}     
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>    
+        
+
+    {{ Form::close() }}
     <hr>
         <table class="table table-bordered">
         <thead>
@@ -32,18 +43,15 @@
                          </a>
                          <a href="{{route('etiqueta.destroy',$etiqueta->id)}}" onclick="return confirm('¿Estas seguro de querer eliminar esta etiqueta?')" class="btn btn-danger">
                              <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-                             
+                            Eliminar
                          </a>
                      </td>
                  </tr>
                  @endforeach
         </tbody>
         </table>
-        
-        <div class="floating">
-        <a href="{{url('/etiqueta/create')}}" class="btn btn-primary btn-fab">
-            <i class="material-icons">add</i>
-        </a>
-        </div>
+        <div class="text-center">		
+            {{ $etiquetas->render() }}
+        </div>        
     </div>
-    @endsection
+@endsection

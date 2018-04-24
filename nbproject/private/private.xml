@@ -6,19 +6,14 @@
             <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/form.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/form.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/edit.blade.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/database/migrations/2018_04_04_184352_create_etiqueta_table.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/empresa/show.blade.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/composer.json</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/edit.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/buscar.blade.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/database/migrations/2018_04_09_152645_create_empresa_table.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/etiqueta/index.blade.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/HomeController.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/resources/views/home.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/front/parcial/aside.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/app/Etiqueta.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/resources/views/empresa/edit.blade.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/public/imagen/2.jpeg</file>
-            <file>file:/opt/lampp/htdocs/empresa/database/migrations/2018_03_31_130206_create_rubro_table.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/resources/views/front/index.blade.php</file>
+            <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/BuscarController.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/empresa/index.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/EtiquetaController.php</file>
             <file>file:/opt/lampp/htdocs/empresa/app/User.php</file>
@@ -28,15 +23,12 @@
             <file>file:/opt/lampp/htdocs/empresa/resources/views/layouts/app.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/index.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/rubro/create.blade.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/resources/views/welcome.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/app/Empresa.php</file>
             <file>file:/opt/lampp/htdocs/empresa/resources/views/empresa/form.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/app/Rubro.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/resources/views/empresa/create.blade.php</file>
             <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/RubroController.php</file>
             <file>file:/opt/lampp/htdocs/empresa/.env</file>
             <file>file:/opt/lampp/htdocs/empresa/app/Http/Controllers/EmpresaController.php</file>
-            <file>file:/opt/lampp/htdocs/empresa/config/app.php</file>
         </group>
     </open-files>
 </project-private>

@@ -11,9 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('buscar');
-});
+Route::get('/', [
+    'as'=>'front.index',
+    'uses'=>'BuscarController@index'
+]);
+
+//Route::get('rubro/{nombre}',[
+//    'uses'=>'BuscarController@searchRubro',
+//    'as'=>'front.search.rubro'
+//]);
+
+//Route::get('etiqueta/{nombre}',[
+//    'uses'=>'BuscarController@searchEtiqueta',
+//    'as'=>'front.search.etiqueta'
+//]);
 
 Auth::routes();
 Route::get('empresa/imagen/{filename}',function($filename){

@@ -14,7 +14,7 @@ class RubroController extends Controller
      */
     public function index()
     {
-        $rubros= Rubro::all();
+        $rubros= Rubro::orderBy('id','ASC')->paginate(4);
         return view("rubro.index",["rubros"=>$rubros]);
     }
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Empresa;
 use App\Rubro;
 use App\Etiqueta;
+use DB;
 
 class EmpresaController extends Controller
 {
@@ -14,10 +15,27 @@ class EmpresaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $empresa= Empresa::all();
+    public function index(Request $request)
+    {     
+        $nombre=trim($request->get('nombre'));
+        
+        $aux=strtolower($nombre);
+//        $tabla=str_word_count($aux,1);
+//        dd($tabla);
+        $empresa= Empresa::nombre($nombre)->orderBy('nombre','ASC')->paginate(4);
+        
+//        $etiqueta= Etiqueta::searchEtiqueta('venta')->first();
+//        $empresa=$etiqueta->empresas()->paginate(4);
+        
         return view("empresa.index",["empresa"=>$empresa]);
+    }
+    
+    public function findEmpresaxEtiqueta(Request $request){
+        $aux=$request->get('nombre');
+        $aux= trim($request);
+        $nombre= strtolower($aux);
+        $empresa=DB::select("call empresas_x_etiqueta(".$request.")");
+        return view('empresa.index',["empresa"=>$empresa]);
     }
 
     /**

@@ -4,6 +4,10 @@
         <h1>Rubro</h1>
     </div>
     <div class="container">
+        <a href="{{url('/rubro/create')}}" class="btn btn-info">
+            Nuevo Rubro
+        </a>
+        <hr>
         <table class="table table-bordered">
         <thead>
         <tr>
@@ -27,11 +31,7 @@
                  </tr>
                  @endforeach
         </tbody>
-        </table>
-        <div class="floating">
-        <a href="{{url('/rubro/create')}}" class="btn btn-primary btn-fab">
-            <i class="material-icons">add</i>
-        </a>
-        </div>
+        </table>  
+        {{ $rubros->render() }}
     </div>
     @endsection

@@ -2,8 +2,24 @@
 @section("content")
     <div class="big-padding text-center blue-grey white-text">
         <h1>Empresa</h1>
-    </div>
+    </div>	          
     <div class="container">
+        <a href="{{url('/empresa/create')}}" class="btn btn-info">            
+            Nueva Empresa
+        </a>
+    
+        {{ Form::open(['route' => 'empresa.index', 'method' => 'GET', 'class' => 'form-inline pull-right']) }}
+    <div class="form-group">
+        {{Form::text('nombre',null,['class'=>'form-control','placeholder'=>'buscar---'])}}     
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search"></span>
+        </button>
+    </div>
+        {{ Form::close() }}
+    
+        <hr>
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -36,11 +52,9 @@
                     @endforeach
             </tbody>
         </table>
-        <div class="floating">
-        <a href="{{url('/empresa/create')}}" class="btn btn-primary btn-fab">
-            <i class="material-icons">add</i>
-        </a>
-        </div>
+        <div class="text-center">		
+            {{ $empresa->render() }}
+        </div>       
     </div>
 
 @endsection

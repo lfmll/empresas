@@ -1,4 +1,4 @@
-<?php
+<?php   
 
 namespace App;
 
@@ -6,15 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Etiqueta extends Model
 {
-    //
+    protected $table="etiquetas";
+    protected $fillable=['nombre'];
     
-    public function scopeSearch($query, $nombre)
-    {
-        return $query->where('nombre','LIKE',"%$nombre%");
+    public function scopeNombre($query, $nombre)
+    {        
+            return $query->where('nombre','LIKE',"%$nombre%");
     }
     
     public function empresas(){
-        return $this->belongsToMany(Empresa::class);
+        return $this->belongsToMany('App\Empresa');
     }
     
     public function scopeSearchEtiqueta($query,$nombre){

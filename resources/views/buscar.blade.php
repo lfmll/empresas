@@ -29,9 +29,9 @@
                 <div class="panel-heading">Buscador
                     <div id="general" class="panel-body">
                         <div id="busqueda" class="col-md-6">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </div> 
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div> 
                         <div id="paneles">
                         
                             <div class="panel panel-success">
@@ -40,8 +40,14 @@
                                 </div>
                                 <div class="panel-body">
                                     <ul class="list-group">
-                                        <span class="badge">14</span>
-                                        Hola
+                                        @foreach($empresas as $em)
+                                        <li class="list-group-item">
+                                            <span class="badge">{{$em->rubro->count()}}</span>
+                                            <a href="{{route('search.rubro',$em->rubro->nombre)}}">
+                                                {{$em->rubro->nombre}}
+                                            </a>
+                                        </li>
+                                        @endforeach
                                     </ul>
                                 </div>
                             </div>                          
@@ -53,10 +59,14 @@
                                     <h3 class="panel-title">Etiquetas</h3>
                                 </div>
                                 <div class="panel-body">
-                                    <ul class="list-group">
-                                        <span class="badge">4</span>
-                                        fernando
-                                    </ul>
+                                    @foreach($empresas as $em)
+                                    <li class="list-group-item">
+                                    <span class="badge">*</span>
+                                        <a href="{{route('search.etiqueta',$em->nombre)}}">
+                                            {{$em->nombre}}
+                                        </a>
+                                    </li>
+                                    @endforeach
                                 </div>
                             </div>
                         

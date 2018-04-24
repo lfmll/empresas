@@ -6,13 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empresa extends Model
 {
-    protected $fillable=["rubro_id"];
+    protected $table="empresas";
+    protected $fillable=["nombre","rubro_id"];
     
     public function rubro(){
-        return $this->belongsTo(Rubro::class);
+        return $this->belongsTo('App\Rubro');
     }
     
     public function etiquetas(){
-        return $this->belongsToMany(Etiqueta::class);
+        return $this->belongsToMany('App\Etiqueta');
     }
+    
+    public function scopeNombre($query,$nombre){
+        if ($nombre)
+            return $query->where('nombre','LIKE',"%$nombre%");
+    }
+    
 }

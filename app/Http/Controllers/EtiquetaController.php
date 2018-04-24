@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -15,8 +16,11 @@ class EtiquetaController extends Controller
      */
     public function index(Request $request)
     {
-        $etiquetas=Etiqueta::search($request->nombre)->orderBy('id','ASC')->paginate(5);
-        
+        $aux=trim($request->get('nombre'));
+        $nombre= strtolower($aux);
+        $etiquetas=Etiqueta::nombre($nombre)
+                ->orderBy('nombre','ASC')                
+                ->paginate(4);
         return view("etiqueta.index",["etiquetas"=>$etiquetas]);
     }
 
